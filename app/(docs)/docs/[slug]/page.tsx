@@ -156,7 +156,7 @@ export default function DocPage({ params }: { params: { slug: string } }) {
     <div>
       {/* Breadcrumb */}
       <div style={{ display: 'flex', alignItems: 'center', gap: '0.375rem', marginBottom: '1.5rem', fontSize: '0.8125rem', color: '#9CA3AF' }}>
-        <Link href="/" style={{ color: '#9CA3AF', textDecoration: 'none', hover: { color: '#0057FF' } }}>Docs</Link>
+        <Link href="/" style={{ color: '#9CA3AF', textDecoration: 'none' }}>Docs</Link>
         <span>/</span>
         <span style={{ color: '#4B5563' }}>{doc.title}</span>
       </div>
