@@ -8,7 +8,7 @@ export default function NotFound() {
         Page not found
       </h1>
       <p style={{ color: '#6B7280', marginBottom: '2rem' }}>
-        This documentation page doesn't exist yet.
+        ThThis documentation page does not exist yet.
       </p>
       <Link href="/" style={{
         display: 'inline-block', padding: '0.625rem 1.5rem',

@@ -38,7 +38,7 @@ function renderContent(content: string) {
     } else if (line.startsWith('<div class="callout">')) {
       // Find closing div
       let j = i
-      let calloutLines = []
+      const calloutLines: string[] = []
       while (j < lines.length && !lines[j].includes('</div>')) {
         calloutLines.push(lines[j])
         j++
