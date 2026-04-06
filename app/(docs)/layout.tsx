@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { docsNav } from '@/lib/docs-nav'
+import Footer from './Footer'
+
 
 function Sidebar({ onClose }: { onClose?: () => void }) {
   const pathname = usePathname()
@@ -47,10 +49,10 @@ function Sidebar({ onClose }: { onClose?: () => void }) {
               )
             })}
           </ul>
-        </div>
-      ))}
+       </div>
+      <Footer/>
     </div>
-  )
+    )
 }
 
 export default function DocsLayout({ children }: { children: React.ReactNode }) {
