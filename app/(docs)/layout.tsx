@@ -49,10 +49,10 @@ function Sidebar({ onClose }: { onClose?: () => void }) {
               )
             })}
           </ul>
-       </div>
-      <Footer/>
+        </div>
+      ))}
     </div>
-    )
+  )
 }
 
 export default function DocsLayout({ children }: { children: React.ReactNode }) {
@@ -208,6 +208,7 @@ export default function DocsLayout({ children }: { children: React.ReactNode }) 
           {children}
         </main>
       </div>
+      <Footer />
     </div>
   )
 }
