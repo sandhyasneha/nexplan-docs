@@ -1550,3 +1550,141 @@ Enterprise plans include custom pricing and onboarding. Contact **info@nexplan.i
     `,
   },
 ]
+
+export const docsContentOrg: DocContent[] = [
+  {
+    title: 'Organisation Overview',
+    slug: 'organisation-overview',
+    description: 'Manage your NexPlan organisation, members, and workspaces.',
+    roles: ['Admin', 'PM'],
+    content: `
+## Organisation Overview
+
+An Organisation in NexPlan is your company or team's shared workspace. All projects, members, and workspaces belong to your organisation.
+
+### Accessing Organisation Settings
+Click **Organisation** in the left sidebar.
+
+### What You Can Manage
+- **Members** — invite and manage team members
+- **Workspaces** — group projects by client or team
+- **Organisation Dashboard** — portfolio view of all projects
+- **Join Links** — generate shareable invite links
+- **Roles** — assign PM or Viewer roles to members
+
+### Organisation ID
+Your organisation has a unique ID used for internal tracking. Admins can find this in the organisation settings page.
+
+### Multi-Organisation Support
+Each NexPlan account belongs to one organisation. Enterprise plans support multiple organisations under one account.
+    `,
+  },
+  {
+    title: 'Client Portal',
+    slug: 'client-portal',
+    description: 'Give clients read-only visibility into their project.',
+    roles: ['PM', 'Admin'],
+    content: `
+## Client Portal
+
+The Client Portal gives your clients a **read-only view** of their project — without giving them access to your full NexPlan workspace.
+
+### Accessing It
+Click **Client Portal** in the left sidebar.
+
+### What Clients Can See
+- Project name and status
+- Task progress and completion percentage
+- Key milestones
+- Risk summary
+- Timeline view
+
+### What Clients Cannot Do
+- Edit tasks
+- Create projects
+- Access other projects
+- View internal notes
+
+### Sharing with Clients
+1. Go to **Client Portal**
+2. Select the project
+3. Copy the **share link**
+4. Send to your client
+
+<div class="callout"><p>👁️ The Client Portal is view-only — clients cannot make any changes to your project.</p></div>
+    `,
+  },
+]
+
+export const docsContentIA: DocContent[] = [
+  {
+    title: 'Infra Impact Analyzer',
+    slug: 'infra-impact-analyzer',
+    description: 'AI-powered infrastructure change impact analysis — identify risks, generate tasks and build change documentation in seconds.',
+    roles: ['All users'],
+    content: `
+## Infra Impact Analyzer
+
+The Infra Impact Analyzer is NexPlan's most powerful AI feature — built exclusively for IT Project Managers who manage infrastructure changes. Describe your change in plain English and AI instantly produces a complete professional change analysis.
+
+### What It Does
+
+In under 30 seconds, AI generates:
+- **Affected CIs** — every configuration item impacted by the change
+- **Risk Assessment** — RAG-rated risks (Critical / High / Medium / Low) with specific mitigations
+- **Justification** — business and technical case for the change
+- **Implementation Plan** — step-by-step execution guide
+- **Pre-Implementation Test Plan** — what to verify before you start
+- **Post-Implementation Test Plan** — what to verify after completion
+- **Back-out Plan** — how to safely roll back if something goes wrong
+- **Stakeholder Alerts** — who needs to be notified
+- **ServiceNow Field Mapping** — Category, Impact, Urgency, Risk, Change Type
+- **Suggested Tasks** — 8-12 tasks importable directly to your Kanban board
+
+### Why IT PMs Need It
+
+Traditional change documentation takes 3-6 hours per change. Manually identifying affected systems, writing risk assessments, building test plans and back-out procedures is time-consuming and error-prone.
+
+The Infra Impact Analyzer does this in under 30 seconds — identifying risks you might miss, generating tasks your team can act on immediately, and producing a PDF report ready for your Change Advisory Board.
+
+No other project management tool — not Jira, not ServiceNow, not Monday.com — offers this level of IT infrastructure-specific intelligence built directly into your project board.
+
+### How to Use It
+
+1. Open your project on the **Kanban Board**
+2. Click **🔍 Impact** in the toolbar
+3. Select the project you are analysing
+4. Describe your infrastructure change in plain English
+5. Optionally add your **ServiceNow Change Number** and **Planned Change Date**
+6. Click **Run Impact Analysis**
+7. Review results across five tabs:
+   - **Overview** — Affected CIs, risks, justification, stakeholders, suggested tasks
+   - **Implementation** — Step-by-step implementation plan
+   - **Testing** — Pre and post implementation test plans
+   - **Back-out** — Rollback / back-out plan
+   - **ServiceNow** — Change field mapping
+8. Click **Import Tasks** to add suggested tasks to your Kanban board
+9. Click **Download PDF** to save the complete report
+
+### Example Change Descriptions
+
+Be specific — include systems, locations, applications, and scope:
+
+- "Upgrade Cisco core switches from IOS 15.x to 17.x across 3 sites — affects 200 users and core routing"
+- "Migrate 5 on-premise SQL Server databases to Azure SQL including finance and CRM systems, 4 week window"
+- "Deploy new Palo Alto firewall replacing legacy ASA — includes rule migration, VPN reconfiguration and UAT"
+- "Install 30 WAPs across new facility — corporate and guest WiFi, Cisco Meraki, RADIUS integration"
+- "Office network relocation — move 150 users from Building A to Building B, new cabling, switches and WiFi"
+
+### Analysis History
+
+Every analysis is saved automatically to your account. Click **🕒 History** in the analyzer header to view and reload any past analysis instantly — no tokens used, no waiting.
+
+### ServiceNow Integration
+
+The analyzer maps your change to ServiceNow fields. When ServiceNow Bridge is enabled (Enterprise feature), these fields are pushed directly to your ServiceNow change record automatically.
+
+<div class="callout"><p>🔍 Free plan: 3 analyses/month. Pro plan: unlimited analyses. Upgrade from the sidebar.</p></div>
+    `,
+  },
+]

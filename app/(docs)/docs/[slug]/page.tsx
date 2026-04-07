@@ -1,14 +1,14 @@
-import { docsContent, docsContentExtra } from '@/lib/docs-content'
+import { docsContent, docsContentExtra, docsContentOrg, docsContentIA } from '@/lib/docs-content'
 import { docsNav } from '@/lib/docs-nav'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
 export async function generateStaticParams() {
-  return [...docsContent, ...docsContentExtra].map(doc => ({ slug: doc.slug }))
+  return [...docsContent, ...docsContentExtra, ...docsContentOrg, ...docsContentIA].map(doc => ({ slug: doc.slug }))
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const allDocs = [...docsContent, ...docsContentExtra]
+  const allDocs = [...docsContent, ...docsContentExtra, ...docsContentOrg, ...docsContentIA]
   const doc = allDocs.find(d => d.slug === params.slug)
   if (!doc) return {}
   return {
@@ -38,7 +38,7 @@ function renderContent(content: string) {
     } else if (line.startsWith('<div class="callout">')) {
       // Find closing div
       let j = i
-      const calloutLines: string[] = []
+      let calloutLines = []
       while (j < lines.length && !lines[j].includes('</div>')) {
         calloutLines.push(lines[j])
         j++
@@ -142,7 +142,7 @@ function formatInline(text: string): string {
 }
 
 export default function DocPage({ params }: { params: { slug: string } }) {
-  const allDocs = [...docsContent, ...docsContentExtra]
+  const allDocs = [...docsContent, ...docsContentExtra, ...docsContentOrg, ...docsContentIA]
   const doc = allDocs.find(d => d.slug === params.slug)
   if (!doc) notFound()
 
@@ -156,7 +156,7 @@ export default function DocPage({ params }: { params: { slug: string } }) {
     <div>
       {/* Breadcrumb */}
       <div style={{ display: 'flex', alignItems: 'center', gap: '0.375rem', marginBottom: '1.5rem', fontSize: '0.8125rem', color: '#9CA3AF' }}>
-        <Link href="/" style={{ color: '#9CA3AF', textDecoration: 'none' }}>Docs</Link>
+        <Link href="/" style={{ color: '#9CA3AF', textDecoration: 'none', hover: { color: '#0057FF' } }}>Docs</Link>
         <span>/</span>
         <span style={{ color: '#4B5563' }}>{doc.title}</span>
       </div>

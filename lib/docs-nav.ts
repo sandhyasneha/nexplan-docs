@@ -73,6 +73,7 @@ export const docsNav: DocSection[] = [
   {
     section: 'AI Features',
     items: [
+      { title: 'Infra Impact Analyzer', slug: 'infra-impact-analyzer', icon: '🔍' },
       { title: 'AI Knowledge Base', slug: 'ai-knowledge-base', icon: '🧠' },
       { title: 'AI Project Manager', slug: 'ai-project-manager', icon: '🤖' },
       { title: 'AI Status Reports', slug: 'ai-status-reports', icon: '📝' },
@@ -118,6 +119,17 @@ export const docsNav: DocSection[] = [
     items: [
       { title: 'Installing NexPlan (PWA)', slug: 'pwa-install', icon: '📱' },
       { title: 'Mobile Kanban', slug: 'mobile-kanban', icon: '📲' },
+    ],
+  },
+  {
+    section: 'Organisation',
+    items: [
+      { title: 'Organisation Overview', slug: 'organisation-overview', icon: '🏢' },
+      { title: 'Inviting Members', slug: 'inviting-members', icon: '📨' },
+      { title: 'Roles & Permissions', slug: 'roles-permissions', icon: '🔑' },
+      { title: 'Organisation Dashboard', slug: 'org-dashboard', icon: '📊' },
+      { title: 'Workspaces', slug: 'workspaces', icon: '🗃️' },
+      { title: 'Client Portal', slug: 'client-portal', icon: '👁️' },
     ],
   },
   {

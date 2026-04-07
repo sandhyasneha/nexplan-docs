@@ -7,7 +7,7 @@ export default function DocsHome() {
     { title: 'How to Sign Up', slug: 'how-to-sign-up', icon: '✍️', desc: 'Create your account' },
     { title: 'Creating a Project', slug: 'creating-a-project', icon: '📁', desc: 'Start your first project' },
     { title: 'Kanban Board', slug: 'kanban-board', icon: '📋', desc: 'Understand the board' },
-    { title: 'Assigning Tasks', slug: 'assigning-tasks', icon: '👤', desc: 'Assign work to your team' },
+    { title: 'Infra Impact Analyzer', slug: 'infra-impact-analyzer', icon: '🔍', desc: 'AI change impact analysis' },
     { title: 'Installing PWA', slug: 'pwa-install', icon: '📱', desc: 'Install on your device' },
   ]
 
